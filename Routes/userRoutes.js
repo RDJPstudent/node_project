@@ -12,5 +12,12 @@ router.get('/search', (req, res) => {
     res.send(`Search query: ${req.query.q}`);
 });
 
+//Example of a Middleware Function
+//This is a logger in essence.
+router.use((req, res, next) =>{
+    console.log(`Request URL: ${req.url}. Time: ${new Date()}`);
+    next();
+});
+
 
 module.export = router;
