@@ -16,7 +16,7 @@ router.get('/search', (req, res) => {
 //This is a logger in essence.
 router.use((req, res, next) =>{
     console.log(`Request URL: ${req.url}. Time: ${new Date()}`);
-    next();
+    //next();
 });
 
 
