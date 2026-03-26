@@ -3,6 +3,15 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
 
+//added on 2nd day
+const userRoutes = require(`./Routes/userRoutes`);
+//
+
+
+//added on 2nd day, middleware
+app.use(userRoutes);
+
+
 //The slash is the root of a domain
 
 //Route Handler
