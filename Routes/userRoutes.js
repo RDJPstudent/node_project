@@ -8,7 +8,7 @@ router.get('/users/:id', (req, res) => {
 });
 
 //example of a query parameter
-router.get('/searc', (req, res) => {
+router.get('/search', (req, res) => {
     res.send(`Search query: ${req.query.q}`);
 });
 
