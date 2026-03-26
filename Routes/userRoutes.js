@@ -1,8 +1,8 @@
+
 const express = require('express');
-const Router = express.router();
+const router = express.Router();
 
-//examples of a route paramter
-
+//example of a route parameter
 router.get('/users/:id', (req, res) => {
     res.send(`User ID: ${req.params.id}`);
 });
@@ -12,12 +12,11 @@ router.get('/search', (req, res) => {
     res.send(`Search query: ${req.query.q}`);
 });
 
-//Example of a Middleware Function
-//This is a logger in essence.
+//example of a middleware function
 router.use((req, res, next) =>{
-    console.log(`Request URL: ${req.url}. Time: ${new Date()}`);
+    console.log(`Request URL: ${req.url}.  Time: ${new Date()}`);
     next();
 });
 
-
-module.export = router;
+//commonjs syntax to export the router (configured in package.json "type": "commonjs")
+module.exports = router;
