@@ -5,7 +5,7 @@ const port = process.env.PORT || 8000;
 const ejs = require('ejs');
 
 //added on 2nd day
-const userRoutes = require(`./Routes/userRoutes`);
+const userRoutes = require(`./routes/userRoutes`);
 
 //View engine
 app.set('view engine', 'ejs');
