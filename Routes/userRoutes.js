@@ -2,6 +2,11 @@
 const express = require('express');
 const router = express.Router();
 
+//Home page
+router.get('/home', (req, res) =>{
+    res.render('home');
+});
+
 //example of a route parameter
 router.get('/users/:id', (req, res) => {
     res.send(`User ID: ${req.params.id}`);
