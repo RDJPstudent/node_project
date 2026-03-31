@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
 const ejs = require('ejs');
+const mongoose = require('mongoose');
+const uri = process.env.MONGO_URI;
 
 //added on 2nd day
 const userRoutes = require(`./routes/userRoutes`);
@@ -31,6 +33,38 @@ app.get('/', (req, res) => [
 ]);
 //controllers tend to give views
 //API end points serve data
+
+//Connect to MongoDB
+// mongoose.connect(uri).then(() => {
+//     console.log('Connected to MongoDB');
+//     //server setp
+//     app.listen(port, ()=> {
+//         console.log(`Server is running on port ${port}`);
+//     });
+//     catch.((err) => {
+//         console.log(`Server is running on port ${port}`);
+//     })
+    
+// });
+
+// }).catch(err) => {
+//     console.log(`Error connecting o mongoDB: {err}`);
+// }
+
+//connect
+mongoose
+  .connect(uri)
+  .then(async () => {
+    console.log("Connected to MongoDB");
+
+    //server setup
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+  })
+  .catch((err) => {
+    console.log(`Error connecting to MongoDB: ${err}`);
+  });
 
 //Server Setup
 app.listen(port, () => {
