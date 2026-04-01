@@ -4,7 +4,9 @@ const router = express.Router();
 
 //Home page
 router.get('/home', (req, res) =>{
-    res.render('home');
+    let user = "Jor";
+
+    res.render('home', {user});
 });
 
 //example of a route parameter
