@@ -54,6 +54,18 @@ app.get('/', (req, res) => {
 //     console.log(`Error connecting o mongoDB: {err}`);
 // }
 
+
+app.get('/json-response', (req, res) => {
+
+  const data = {
+    name: "John Doy",
+
+  }
+
+  res.json(data);
+});
+
+
 //connect
 mongoose
   .connect(uri)
