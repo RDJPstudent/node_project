@@ -1,10 +1,12 @@
 //This is our app! Woo!
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 8000;
 const ejs = require('ejs');
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
+dotenv.config();
 const uri = process.env.MONGO_URI;
+const port = process.env.PORT || 8000;
 
 //added on 2nd day
 const userRoutes = require(`./routes/userRoutes`);
