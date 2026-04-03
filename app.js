@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 
-const ejs = require("ejs");
+const ejs = require('ejs');
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -13,8 +13,8 @@ const port = process.env.PORT || 8000;
 const userRoutes = require("./routes/userRoutes");
 
 //View engine
-app.set("view engine", "ejs");
-app.set("views", "./views");
+app.set('view engine', 'ejs');
+app.set("views", './views');
 // The "./" is for relative path.
 
 
