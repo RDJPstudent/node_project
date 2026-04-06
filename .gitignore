@@ -1,1 +1,12 @@
 node_modules/
+
+URI = Scheme:[//authority]path[?query][#fragment]
+        file://house/user/report.pdf
+        [?query] can act as a filter as pre-fragment
+
+URN = Scheme:[//authority]path[?query][#fragment]
+        Identifies resorce, not location.
+        Uses these schemes:
+                uuid (Universally Unique Identifier),
+                doi (Digital Object Finder),
+                ISBN (International Standard Book Number)

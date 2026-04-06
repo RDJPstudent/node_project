@@ -1,6 +1,7 @@
 
-const express = require('express');
-const router = express.Router();
+const express = require('express'); //import express from 'express';
+const router = express.Router(); // import configure from './routers';
+
 
 //Home page
 router.get('/home', (req, res) =>{
