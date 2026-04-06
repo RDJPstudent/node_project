@@ -1,6 +1,7 @@
 
 const express = require('express'); //import express from 'express';
 const router = express.Router(); // import configure from './routers';
+const userController = require('../controllers/userController'); //For the createUser function
 
 
 //Home page
@@ -9,6 +10,10 @@ router.get('/home', (req, res) =>{
 
     res.render('home', {user});
 });
+
+//This route will link the createUser function to the Root Handler
+router.post('/users', userController.createUser); //Referencing the file and the function in this line
+
 
 //example of a route parameter
 router.get('/users/:id', (req, res) => {
