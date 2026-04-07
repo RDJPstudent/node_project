@@ -6,9 +6,10 @@ const userController = require('../controllers/userController'); //For the creat
 
 //Home page
 router.get('/home', (req, res) =>{
-    let user = "Jor";
+    //let user = "Jor";
 
-    res.render('home', {user}).status(200);
+    //res.render('home', {user}).status(200);
+    res.render('home');
 });
 
 //This route will link the createUser function to the Root Handler

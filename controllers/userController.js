@@ -13,7 +13,7 @@ async function createUser(req, res) { // The route handler makes this work
             first_name: req.body.first_name,
             username: req.body.username,
             email: req.body.email,
-        }
+        };
 
 
         //This creates a new user in the documents
@@ -23,10 +23,10 @@ async function createUser(req, res) { // The route handler makes this work
         await user.save();
 
         //send a response to the client
-        res.status(201).jason({"user created and you are A O K": user});
+        res.status(201).json({"user created and you are A O K": user});
 
     }catch(error){
-        res.status(500).jason({"Internal server mess-up": error.message});
+        res.status(500).json({"Internal server mess-up": error.message});
         //Proper error handling
 
     }
