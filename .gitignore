@@ -10,3 +10,4 @@ URN = Scheme:[//authority]path[?query][#fragment]
                 uuid (Universally Unique Identifier),
                 doi (Digital Object Finder),
                 ISBN (International Standard Book Number)
+
