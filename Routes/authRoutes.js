@@ -5,8 +5,10 @@ const authController = require('../controllers/authControllers');
 
 router.get('/generate-token', authController.generateToken);
 // now we import the file :)
-
 //last step before lunch break
+
+//new day
+router.post('/verify-token', authController.verifyToken);
 
 
 

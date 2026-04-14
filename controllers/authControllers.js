@@ -58,4 +58,4 @@ async function verifyToken(req, res){
 }
 
 //export this off the page
-module.exports = {generateToken, verifyToken}
+module.exports = {generateToken, verifyToken};
